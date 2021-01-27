@@ -9,14 +9,14 @@
 
     <meta property="og:title" content="Pop Cat" />
     <meta property="og:description" content="This is simple Website/PWA that allows you to pop the pop cat on your phone or desktop." />
-    <meta property="og:image" content="https://pop-cat.com/close.png" />
+    <meta property="og:image" content="https://pop-cat.com/resources/close.png" />
 
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="https://pop-cat.com" />
     <meta name="twitter:title" content="Pop Cat" />
     <meta name="twitter:description" content="This is simple Website/PWA that allows you to pop the pop cat on your phone or desktop." />
-    <meta name="twitter:image" content="https://pop-cat.com/close.png" />
+    <meta name="twitter:image" content="https://pop-cat.com/resources/close.png" />
 
     <style>
         * {
@@ -67,13 +67,13 @@
 
 </head>
 <body>
-<img id="cat" src="/close.png" alt="Closed cat">
+<img id="cat" src="/resources/close.png" alt="Closed cat">
 <a target="_blank" href="https://twitter.com/BVDGRRL/status/1354035503582961664?s=20">Credits</a>
 </body>
 
 
 <script>
-    let audio = new Audio('/sound.mp3');
+    let audio = new Audio('/resources/sound.mp3');
     let div = document.getElementById('cat')
 
     let timerId;
@@ -105,7 +105,7 @@
 
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/swd.js', {scope: '/'}).then(function (registration) {
+            navigator.serviceWorker.register('/sw-2.js', {scope: '/'}).then(function (registration) {
                 // Registration was successful
                 console.log('ServiceWorker registration successful with scope: ', registration.scope);
             }, function (err) {
@@ -119,9 +119,9 @@
 
 
         audio.play();
-        div.src = '/open.png'
+        div.src = '/resources/open.png'
         setTimeout(() => {
-            div.src = '/close.png'
+            div.src = '/resources/close.png'
         }, 100)
 
 

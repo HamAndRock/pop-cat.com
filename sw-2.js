@@ -1,4 +1,4 @@
-importScripts('/cache-polyfill.js');
+importScripts('/resources/cache-polyfill.js');
 
 self.addEventListener('install', e => {
     e.waitUntil(
@@ -6,9 +6,9 @@ self.addEventListener('install', e => {
             return cache.addAll([
                 `/`,
                 `/index.html`,
-                `/close.png`,
-                `/open.png`,
-                `/sound.mp3`,
+                `/resources/close.png`,
+                `/resources/open.png`,
+                `/resources/sound.mp3`,
             ])
                 .then(() => self.skipWaiting());
         })
