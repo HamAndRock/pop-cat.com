@@ -42,10 +42,16 @@
             -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
         }
 
-        a {
+        #links {
             flex: 100%;
             margin: auto;
             text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        #links a:first-child {
+            margin-right: 20px;
         }
 
         @media only screen and (max-width: 600px) {
@@ -67,8 +73,12 @@
 
 </head>
 <body>
-<img id="cat" src="/resources/close.png" alt="Closed cat">
-<a target="_blank" href="https://twitter.com/BVDGRRL/status/1354035503582961664?s=20">Credits</a>
+<img id="cat" src="https://pop-cat.com/resources/close.png" alt="Closed cat">
+<div id="links">
+    <a target="_blank" href="https://twitter.com/BVDGRRL/status/1354035503582961664?s=20">Credits</a>
+    <a target="_blank" href="https://github.com/HamAndRock/pop-cat.com">Source Code</a>
+
+</div>
 </body>
 
 
